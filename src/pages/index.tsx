@@ -45,8 +45,8 @@ const Content: React.FC = () => {
   );
 
   const createTopic = api.topic.create.useMutation({
-    onSuccess: () => {
-      refetchTopics();
+    onSuccess: async () => {
+      await refetchTopics();
     },
   });
 
@@ -60,14 +60,14 @@ const Content: React.FC = () => {
   );
 
   const createNote = api.note.create.useMutation({
-    onSuccess: () => {
-      refecthNotes();
+    onSuccess: async () => {
+      await refecthNotes();
     },
   });
 
   const deleteNote = api.note.delete.useMutation({
-    onSuccess: () => {
-      refecthNotes();
+    onSuccess: async () => {
+      await refecthNotes();
     },
   });
 
