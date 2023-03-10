@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { Note } from "@prisma/client";
+import type { Note } from "@prisma/client";
 
 export const NoteCard = ({
   note,

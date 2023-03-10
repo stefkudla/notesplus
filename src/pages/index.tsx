@@ -1,18 +1,15 @@
 import { type NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 import { api } from "~/utils/api";
 import { Header } from "~/components/Header";
-import { Topic } from "@prisma/client";
+import type { Topic } from "@prisma/client";
 import { NoteEditor } from "~/components/NoteEditor";
 import { NoteCard } from "~/components/NoteCard";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "world" });
-
   return (
     <>
       <Head>
